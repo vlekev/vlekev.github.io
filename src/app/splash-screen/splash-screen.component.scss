@@ -1,0 +1,95 @@
+.app-splash-screen {
+  background: #1e90ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 1;
+}
+
+.app-logo {
+  background: url("./../../../assets/logo.svg");
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-position: center;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+
+.app-label {
+  margin-top: 32px;
+  color: #fff;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.app-splash-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// .app-loader {
+//   background: url("./../../../assets/three-dots.svg");
+//   background-repeat: no-repeat;
+//   max-width: 100%;
+//   background-position: center;
+//   background-size: contain;
+//   width: 80px;
+//   height: 80px;
+//   margin-top: 80px;
+// }
+
+.app-loader {
+  position: relative;
+  left: -15px;
+  width: 12px;
+  height: 12px;
+  margin-top: 80px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: transparent;
+  margin: -1px 0;
+}
+.app-loader::before,
+.app-loader::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: transparent;
+}
+.app-loader::before {
+  left: 15px;
+  animation: dot-shuttle 2s infinite ease-out;
+}
+.app-loader::after {
+  left: 30px;
+}
+
+@keyframes dot-shuttle {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-45px);
+  }
+  75% {
+    transform: translateX(45px);
+  }
+}
