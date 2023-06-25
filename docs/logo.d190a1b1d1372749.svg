@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93334 270.93334"
+   version="1.1"
+   id="svg235"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="logo-base.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview237"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.6433949"
+     inkscape:cx="62.947344"
+     inkscape:cy="512.90428"
+     inkscape:window-width="1680"
+     inkscape:window-height="1020"
+     inkscape:window-x="192"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs232">
+    <rect
+       x="137.5992"
+       y="357.7579"
+       width="223.05553"
+       height="224.50394"
+       id="rect1157" />
+  </defs>
+  <g
+     inkscape:label="Logo"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="matrix(1.7003889,0,0,1.7003889,-34.572222,-34.572224)">
+    <path
+       style="display:inline;fill:#ffffff;stroke:none;stroke-width:0.264583"
+       d="m 25,100 75,-75 75,75 -75,75 z"
+       id="path302"
+       sodipodi:nodetypes="ccccc"
+       inkscape:label="fond" />
+    <path
+       style="display:inline;fill:#000000;stroke:none;stroke-width:0.264583"
+       d="m 35,100 65,-65 50,55 -50,10 50,10 -50,55"
+       id="path928"
+       sodipodi:nodetypes="cccccc"
+       inkscape:label="B" />
+    <path
+       style="display:inline;fill:#00d3ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="M 100,163 37,100 100,37 c 0,0 2.29753,23.26751 0,33 -2.568716,10.881254 -20,18.81966 -20,30 0,11.18034 17.431284,19.11875 20,30 2.29753,9.73249 0,33 0,33 z"
+       id="path1091"
+       sodipodi:nodetypes="cccsssc"
+       inkscape:label="C" />
+    <text
+       xml:space="preserve"
+       style="font-size:19.7556px;white-space:pre;inline-size:96.1975;display:inline;fill:#000000;fill-opacity:1;stroke:#cbcbcb;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="162.87097"
+       y="148.69162"
+       id="text2463"
+       transform="matrix(0.12705215,-0.1209874,0.12566545,0.1319647,48.26897,46.130128)"
+       inkscape:label="nom"><tspan
+         x="162.87097"
+         y="148.69162"
+         id="tspan259">CRAYSSAC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.08131px;fill:#000000;fill-opacity:1;stroke:#cccccc;stroke-width:0.311943;stroke-dasharray:none;stroke-opacity:1"
+       x="-54.994263"
+       y="194.90269"
+       id="text2517"
+       transform="matrix(0.69167495,-0.77623732,0.71810087,0.63987182,0,0)"
+       inkscape:label="prénom"><tspan
+         sodipodi:role="line"
+         id="tspan2515"
+         style="stroke:#cccccc;stroke-width:0.311943;stroke-opacity:1"
+         x="-54.994263"
+         y="194.90269">BENJAMIN</tspan></text>
+    <path
+       style="display:inline;fill:#cbcbcb;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       d="m 25,100 75,75 75,-75 -75,72"
+       id="path4057"
+       sodipodi:nodetypes="cccc"
+       inkscape:label="ombre" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Filtre"
+     style="display:none"
+     transform="matrix(0.92671083,0,0,0.9440499,10.686423,8.831554)">
+    <path
+       style="display:inline;fill:#000000;fill-opacity:0.897436;stroke:none;stroke-width:0.480995"
+       d="M -1.703305,135.50031 135.91154,0.412995 273.52638,135.50031 135.91154,270.58762 Z"
+       id="path302-6"
+       sodipodi:nodetypes="ccccc"
+       inkscape:label="sombre"
+       transform="matrix(1.0790853,0,0,1.0592661,-11.531562,-9.3549652)" />
+  </g>
+</svg>
