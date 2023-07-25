@@ -32,5 +32,5 @@ Bienvenue sur la partie base de connaissance, ici vous trouverez les commandes l
 - [make](https://www.gnu.org/software/make/manual/make.html)
 - [kubernetes](https://kubernetes.io/docs/home/)
 - [kubernetes-api](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/)
-- [blender](https://https://docs.blender.org/manual/fr/latest/)
+- [blender](https://docs.blender.org/manual/fr/latest/)
 - [unreal-engine](https://docs.unrealengine.com/)
