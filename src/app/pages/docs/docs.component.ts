@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-docs',
@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class DocsComponent {
   doc: string = "index";
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute) { }
   ngOnInit(): void {
       let doc = this.route.snapshot.paramMap.get('doc');
       this.doc = 'assets/docs/' + doc + '.md';
