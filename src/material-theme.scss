@@ -2,8 +2,8 @@
 
 @include mat.core();
 
-$app-primary: mat.define-palette(mat.$indigo-palette, 500);
-$app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$app-primary: mat.define-palette(mat.$blue-palette, 700, 600, 900);
+$app-accent: mat.define-palette(mat.$indigo-palette, A400, A200, A100);
 $app-warn: mat.define-palette(mat.$red-palette);
 
 $app-theme: mat.define-dark-theme((
@@ -17,3 +17,19 @@ $app-theme: mat.define-dark-theme((
 ));
 
 @include mat.all-component-themes($app-theme);
+
+a:link {
+  color: mat.get-color-from-palette($app-accent, 300);
+}
+
+a:visited {
+  color: mat.get-color-from-palette($app-accent, 400);
+}
+
+a:hover {
+  color: mat.get-color-from-palette($app-primary, 300);
+}
+
+a:active {
+  color: mat.get-color-from-palette($app-primary, 300);
+}
