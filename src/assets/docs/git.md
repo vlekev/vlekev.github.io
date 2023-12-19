@@ -1,6 +1,6 @@
 # Git
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Commandes utiles
 - Obtenir le repo du projet:

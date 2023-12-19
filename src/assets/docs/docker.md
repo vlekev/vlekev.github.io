@@ -1,6 +1,6 @@
 # Docker
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Docker CLI
 - Créer une image docker local avec DOCKERFILE et pour nom IMAGE:
@@ -14,6 +14,14 @@ docker login [[REGISTRY]]
 - Obtenir une IMAGE:
 ```bash
 docker pull [[IMAGE]]
+```
+- Exporter IMAGES vers TAR_FILE:
+```bash
+docker save [[IMAGES]] -o [[TAR_FILE]]
+```
+- Importer les images de TAR_FILE:
+```bash
+docker load -i [[TAR_FILE]]
 ```
 - Donner un tag à une IMAGE:
 ```bash
@@ -42,6 +50,10 @@ docker cp [[FILES_SOURCE]] [[CONTAINER_NAME]]:[[FILES_DESTINATION]]
 - Accéder au CONTAINER_NAME:
 ```bash
 docker exec -it [[CONTAINER_NAME]] bash
+```
+- Supprimer tout ce qui n'est pas utilisé:
+```bash
+docker system prune
 ```
 
 ## Docker compose

@@ -1,22 +1,26 @@
-# Base de connaissance
+# Sommaire
 
-Bienvenue sur la partie base de connaissance, ici vous trouverez les commandes les plus utiles, des todolists ou des snippets des outils que j'utilise fréquemment.
+- [ansible](ansible.md)
+- [git](git.md)
+- [linux](linux.md)
+- [vs-code](vs-code.md)
+- [windows](windows.md)
+- [docker](docker.md)
+- [apache](apache.md)
+- [javascript](javascript.md)
+- [vault](vault.md)
+- [vim](vim.md)
+- [mongodb](mongodb.md)
+- [mysql](mysql.md)
+- [mssql](mssql.md)
+- [kubernetes](kubernetes.md)
+- [blender](blender.md)
+- [unreal-engine](unreal-engine.md)
+- [brave](brave.md)
+- [spinnaker](spinnaker.md)
+* [css](css.md)
 
-## Sommaire
-- [ansible](docs/ansible)
-- [git](docs/git)
-- [linux](docs/linux)
-- [vs-code](docs/vs-code)
-- [windows](docs/windows)
-- [docker](docs/docker)
-- [javascript](docs/javascript)
-- [vim](docs/vim)
-- [mysql](docs/mysql)
-- [mssql](docs/mssql)
-- [kubernetes](docs/kubernetes)
-- [brave](docs/brave)
-
-## Documentation externe
+# Documentation externe
 - [developpement général](https://developer.mozilla.org/fr/)
 - [ansible](https://docs.ansible.com/ansible/latest/index.html)
 - [sql](https://sql.sh/)
@@ -31,6 +35,6 @@ Bienvenue sur la partie base de connaissance, ici vous trouverez les commandes l
 - [sed](https://www.gnu.org/software/sed/manual/sed.html)
 - [make](https://www.gnu.org/software/make/manual/make.html)
 - [kubernetes](https://kubernetes.io/docs/home/)
-- [kubernetes-api](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/)
-- [blender](https://docs.blender.org/manual/fr/latest/)
+- [kubernetes-api](https://kubernetes.io/docs/reference/kubernetes-api/)
+- [blender](https://https://docs.blender.org/manual/fr/latest/)
 - [unreal-engine](https://docs.unrealengine.com/)

@@ -1,47 +1,62 @@
 # Kubernetes
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Kubectl
+### Installation
+- krew (manage k8s plugin)
+```bash
+sudo apt-get install -y git
+(
+  set -x; cd "$(mktemp -d)" &&
+  OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
+  ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
+  KREW="krew-${OS}_${ARCH}" &&
+  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
+  tar zxvf "${KREW}.tar.gz" &&
+  ./"${KREW}" install krew
+)
+echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"' >> ~/.bashrc
+```
 
 ### Commandes utiles
-- Changer de namespace
+- Changer de namespace:
 ```bash
 kubectl config set-context --current --namespace=[[NAMESPACE]]
 ```
-- Obtenir la ressource
+- Obtenir la ressource avec un LABEL:
 ```bash
-kubectl get [[RESSOURCE]]
+kubectl get [[RESSOURCE]] --selector=[[LABEL]]=[[LABEL_VALUE]]
 ```
-- Affiche les informations de la ressource
+- Affiche les informations de la ressource:
 ```bash
 kubectl describe [[RESSOURCE]]
 ```
-- Executer un terminal sur POD
+- Executer un terminal sur POD:
 ```bash
 kubectl exec -it [[POD]] -- /bin/bash
 ```
-- Lier un PORT_LOCAL à un PORT_DISTANT d'un SERVICE
+- Lier un PORT_LOCAL à un PORT_DISTANT d'un SERVICE:
 ```bash
 kubectl port-forward services/[[SERVICE]] [[PORT_LOCAL]]:[[PORT_DISTANT]]
 ```
-- Configurer une/des ressource(s) kubernetes
+- Configurer une/des ressource(s) kubernetes:
 ```bash
 kubectl apply -f [[CONFIG_FILE]].yaml
 ```
-- Remplacer une/des ressource(s) kubernetes
+- Remplacer une/des ressource(s) kubernetes:
 ```bash
 kubectl replace --force -f [[CONFIG_FILE]].yaml
 ```
-- Créer un configMap
+- Créer un configMap:
 ```bash
 kubectl create configmap [[SECRET_NAME]] (--from-literal [[KEY]]='[[VALUE]]')|(--from-file [[FILE]])
 ```
-- Créer un Secret
+- Créer un Secret:
 ```bash
 kubectl create secret generic [[SECRET_NAME]] (--from-literal [[KEY]]='[[VALUE]]')|(--from-file=[[KEY]]=[[FILE]])
 ```
-- Supprimer un Secret
+- Supprimer un Secret:
 ```bash
 kubectl delete secret [[SECRET_NAME]] --ignore-not-found
 ```
@@ -56,6 +71,18 @@ kubectl cp [[NAMESPACE]]/[[POD]]:[[PATH_FILE_TARGET]] [[PATH_FILE_DESTINATION]]
 - Copier fichier/répertoire vers POD:
 ```bash
 kubectl cp [[PATH_FILE_TARGET]] [[NAMESPACE]]/[[POD]]:[[PATH_FILE_DESTINATION]]
+```
+- Mise à l'echelle de DEPLOYMENT: 
+```bash
+kubectl scale deployment [[DEPLOYMENT]] --replicas=[[NB_REPLICAS]]
+```
+- Change les limites cpu de DEPLOYMENT: 
+```bash
+kubectl patch deployment [[DEPLOYMENT]] --type json -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/limits/cpu", "value":"[[CPU_LIMIT]]"}]'
+```
+- Change variable environnement des déploiements: 
+```bash
+kubectl set env deployment --selector='[[LABEL]]=[[LABEL_VALUE]],...' [[ENV]]=[[ENV_VALUE]] ...
 ```
 
 ### Snippet
@@ -140,7 +167,8 @@ metadata:
   name: [[DEPLOYEMENT_NAME]]
   namespace: [[NAMESPACE]]
 spec:
-  replicas: [[NB_REPLICA]]
+  replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: [[APP_NAME]]
@@ -176,7 +204,7 @@ spec:
               name: [[STORAGE_NAME]]
           securityContext:
             runAsNonRoot: true
-            runAsUser: [[USER_ID]]
+            runAsUser: 1000
       imagePullSecrets:
         - name: [[REGISTRY_SECRET_ID]]
       volumes:

@@ -1,6 +1,6 @@
 # Vim
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Commandes utiles
 - Couper une ligne dans vim en mode commande: `dd`

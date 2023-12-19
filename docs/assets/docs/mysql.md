@@ -1,6 +1,6 @@
 # MYSQL
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Commandes utiles
 - Se connecter à la base de donnée (DATABASE):
@@ -17,7 +17,7 @@ mysqldump -u [[USER]] -p [[PASSWORD('')]] -h [[HOST]] -P [[PORT(3306)]] --single
 ```
 - Importer une base de donnée:
 ```bash
-mysql [[DATABASE('')]] < [[EXPORT_NAME]].sql
+mysql -u [[USER]] -p[[PASSWORD('')]] -h [[HOST]] -P [[PORT(3306)]] [[DATABASE('')]] < [[EXPORT_NAME]].sql
 ```
 
 ## Requêtes utiles
@@ -68,4 +68,23 @@ SELECT * FROM [[TABLE]] INTO OUTFILE '[[CSV_NAME]].csv' FIELDS TERMINATED BY ','
 - Mettre à jour une/des donnée(s) de TABLE:
 ```sql
 UPDATE [[TABLE]] SET [[COLUMN]]=[[VALUE]],[[...]] WHERE [[...]];
+```
+- Ajouter une ligne total a TABLE:
+```sql
+SELECT [[...]] FROM [[TABLE]] GROUP BY [[...]] WITH ROLLUP;
+```
+- Obtenir la taille de chaque base de donnée:
+```sql
+SELECT 
+    table_schema "database",
+    ROUND(COALESCE(SUM(data_length + index_length),0) / 1024 / 1024, 1) "taille (MB)" 
+FROM information_schema.tables 
+GROUP BY table_schema;
+```
+- Réutiliser une requête pour une autre:
+```sql
+WITH [[REQUETE_NAME]] AS (
+	SELECT [[...]] FROM [[TABLE]]
+)
+SELECT [[...]] FROM [[REQUETE_NAME]];
 ```

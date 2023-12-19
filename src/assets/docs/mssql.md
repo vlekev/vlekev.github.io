@@ -1,6 +1,6 @@
 # MS-SQL
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Commandes utiles
 - Se connecter à la base de donnée (DATABASE):

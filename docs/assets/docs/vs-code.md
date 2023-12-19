@@ -1,6 +1,6 @@
 # VS-Code
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Extensions utiles
 

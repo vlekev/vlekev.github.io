@@ -1,6 +1,6 @@
 # Ansible
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## ansible CLI
 - Pinger le GROUP de serveurs:
@@ -25,6 +25,10 @@ ansible-playbook [[PLAYBOOK]] -i [[INVENTORY]] --vault-password=[[FILE_PASSWORD]
 ```bash
 ansible-vault encrypt [[FICHIER]]
 ```
+- Encrypter une VARIABLE:
+```bash
+ansible-vault encrypt_string --vault-password-file [[VAULT_FILE]] [[VARIABLE_VALUE]] --name [[VARIABLE]]
+``` 
 - Modifier le FICHIER:
 ```bash
 ansible-vault edit [[FICHIER]]

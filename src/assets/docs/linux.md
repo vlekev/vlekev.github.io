@@ -1,8 +1,12 @@
 # Linux
 
-[Retour au sommaire](docs/index)
+[Retour au sommaire](index.md)
 
 ## Sed
+- Modifier REGEX_MATCH par REPLACE dans FICHIER:
+```bash
+sed -i 's/[[REGEX_MATCH]]/[[REGEX_MATCH]]/g' [[FICHIER]]
+```
 - Commenter des lignes de LS à LE dans FICHIER:
 ```bash
 sed -i '[[LS]],[[LE]] s/^/#/' [[FICHIER]]
@@ -41,9 +45,13 @@ ssh-keygen -t ed25519 -b 4096 -N [[PASSPHRASE]] -f [[SSH_KEY_NAME]]
 ```bash
 cat ~/.ssh/[[SSH_KEY_NAME]].pub | ssh [[SSH_USER]]@[[SSH_HOST]] 'cat >> ~/.ssh/authorized_keys'
 ```
+- Se connecter:
+```bash
+ssh [[SSH_USER]]@[[SSH_HOST]] -p[[SSH_PORT]] -i ~/.ssh/[[SSH_KEY_NAME]]
+```
 - Port forward:
 ```bash
-ssh -L [LOCAL_PORT]:[HOST_CIBLE]:[HOST_CIBLE_PORT] [[SSH_USER]]@[[SSH_HOST]]
+ssh -L [[LOCAL_PORT]]:[[HOST_CIBLE]]:[[HOST_CIBLE_PORT]] [[SSH_USER]]@[[SSH_HOST]]
 ```
 
 ## Commandes utiles
@@ -75,6 +83,10 @@ df -f
 ```bash
 du -hd1
 ```
+- Lister tout les fichiers du répertoire DIR:
+```bash
+find [[DIR]] -type f
+```
 - Lister tout les ports utilisés:
 ```bash
 ss -lntu
@@ -102,6 +114,10 @@ rsync -azsP -e "ssh -p [[PORT]]" "[[USER]]@[[IP]]:[[DOSSIER_SOURCE]]/[[FICHIER]]
 - Transfert DOSSIER d'un serveur en local:
 ```bash
 rsync -azsP -e "ssh -p [[PORT]]" "[[USER]]@[[IP]]:[[DOSSIER_SOURCE]]/" "[[DOSSIER_DESTINATION]]" --exclude '[[FILES_EXCLUDE]]'
+```
+- Transfert DOSSIER d'un serveur en local:
+```bash
+scp -rP[[PORT]] -i [[PRIVATE_KEY_SSH]] [[USER]]@[[IP]]:[[DOSSIER_SOURCE]]/* [[DOSSIER_DESTINATION]]
 ```
 - Tester un port distant:
 ```bash
