@@ -1,6 +1,6 @@
 # Windows
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 - Supprimer le cache dns:
 ```

@@ -1,6 +1,6 @@
 # MYSQL
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 ## Commandes utiles
 

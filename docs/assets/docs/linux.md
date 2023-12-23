@@ -1,6 +1,6 @@
 # Linux
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 ## Sed
 - Modifier REGEX_MATCH par REPLACE dans FICHIER:

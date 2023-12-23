@@ -1,6 +1,6 @@
 # Spinnaker
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 ## Installation
 - spin (manage spinnaker)

@@ -1,6 +1,6 @@
 # Ansible
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 ## ansible CLI
 - Pinger le GROUP de serveurs:

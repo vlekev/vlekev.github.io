@@ -1,6 +1,6 @@
 # Javascript
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 ## Nvm
 Permet la gestion de multiple version de node

@@ -1,6 +1,6 @@
 # Blender
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 ## Création d'animation
 - Object mode > Add > Armature

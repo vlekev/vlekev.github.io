@@ -1,6 +1,6 @@
 # Vault
 
-[Retour au sommaire](index.md)
+[Retour au sommaire](docs/index)
 
 ## Vault CLI
 - Configurer:
