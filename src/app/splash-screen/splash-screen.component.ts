@@ -11,11 +11,11 @@ export class SplashScreenComponent implements OnInit {
   windowHeight!: string;
   splashTransition!: string;
   opacityChange: number = 1;
-  showSplash = true;
 
   @Input() animationDuration: number = 0.5;
-  @Input() duration: number = 3;
+  @Input() duration: number = 1;
   @Input() animationType: SplashAnimationType = SplashAnimationType.SlideBottom;
+  @Input() showSplash: boolean = true;
 
   ngOnInit(): void {
     setTimeout(() => {
