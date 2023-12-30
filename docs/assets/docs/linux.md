@@ -147,6 +147,18 @@ grep -Rwho '/etc/apache2/sites-enabled/' -e 'ServerName .*' --exclude=*-le-ssl.c
 ```bash
 printenv
 ```
+- Appel API:
+```bash
+curl -H "[[HEADER_KEY]]: [[HEADER_VALUE]]" -X [[METHOD_HTTP]] [[URL]] -d "[[BODY_DATA]]"
+```
+- Obtenir l'ip d'un domaine:
+```bash
+dig +short [[DOMAINE]]
+```
+- Obtenir le dns inverse d'une ip :
+```bash
+dig +short -x [[IP]]
+```
 - Création d'un certificat autosigné:
 ```bash
 domaine=*.domaine.tdl
