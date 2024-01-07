@@ -1,4 +1,4 @@
-# MYSQL
+# Mongodb
 
 [Retour au sommaire](docs/index)
 
@@ -7,25 +7,25 @@
 - Se connecter à la base de donnée (DATABASE):
 
 ```bash
-mongosh "mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(3306)]]/[[DATABASE('')]]"
+mongosh "mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]"
 ```
 
 - Faire une requête sur DATABASE:
 
 ```bash
-mongosh "mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(3306)]]/[[DATABASE('')]]" --eval "[[QUERY_JAVASCRIPT]]"
+mongosh "mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]" --eval "[[QUERY_JAVASCRIPT]]"
 ```
 
 - Exporter une base de donnée:
 
 ```bash
-mongodump --uri="mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(3306)]]/[[DATABASE('')]]" -o [[EXPORT_NAME]].json
+mongodump --uri="mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]" -o [[EXPORT_NAME]] --gzip
 ```
 
 - Importer une base de donnée:
 
 ```bash
-mongorestore --uri="mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(3306)]]/[[DATABASE('')]]" [[EXPORT_NAME]].json
+mongorestore --uri="mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]" [[EXPORT_NAME]] --gzip
 ```
 
 ## Requêtes utiles
@@ -46,12 +46,6 @@ show databases
 
 ```javascript
 show tables
-```
-
-- Obtenir les colonnes de TABLE:
-
-```javascript
-SHOW COLUMNS FROM [[TABLE]];
 ```
 
 - Obtenir l'utilisateur actuel:
@@ -82,4 +76,24 @@ db.createUser({
 ```javascript
 use[[DATABASE]];
 db.dropUser("[[USER]]");
+```
+
+- Chercher des donnée(s) de TABLE:
+```javascript
+db.[[TABLE]].find([[JSON_DATA_SEARCH]])
+```
+
+- Créer une/des donnée(s) de TABLE:
+```javascript
+db.[[TABLE]].insertMany([[ARRAY_JSON_DATA]])
+```
+
+- Mettre à jour une/des donnée(s) de TABLE:
+```javascript
+db.[[TABLE]].updateMany([[JSON_QUERY]], [[JSON_DATA]], [[JSON_OPTIONS]])
+```
+
+- Supprimer une/des donnée(s) de TABLE:
+```javascript
+db.[[TABLE]].deleteMany([[JSON_QUERY]], [[JSON_OPTIONS]])
 ```

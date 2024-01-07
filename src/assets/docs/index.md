@@ -24,6 +24,7 @@
 - [developpement général](https://developer.mozilla.org/fr/)
 - [ansible](https://docs.ansible.com/ansible/latest/index.html)
 - [sql](https://sql.sh/)
+- [mongodb](https://www.mongodb.com/docs/manual/)
 - [symfony](https://symfony.com/doc/current/index.html)
 - [api-platform](https://api-platform.com/docs)
 - [linux](https://www.debian.org/doc/manuals/debian-handbook/)
