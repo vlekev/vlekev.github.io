@@ -63,7 +63,7 @@ show users
 - Créer USER:
 
 ```javascript
-use[[DATABASE]];
+use [[DATABASE]];
 db.createUser({
   user: "[[USER]]",
   pwd: "[[PASSWORD]]",
@@ -74,8 +74,14 @@ db.createUser({
 - Supprimer un USER:
 
 ```javascript
-use[[DATABASE]];
-db.dropUser("[[USER]]");
+use [[DATABASE]]
+db.dropUser("[[USER]]")
+```
+
+- Supprimer DATABASE:
+```javascript
+use [[DATABASE]]
+db.dropDatabase()
 ```
 
 - Chercher des donnée(s) de TABLE:
