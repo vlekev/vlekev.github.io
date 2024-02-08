@@ -45,6 +45,11 @@ vault list auth/[[MODE_AUTH]]/role
 vault write auth/[[MODE_AUTH]]/role/[[ROLE_NAME]] [[JSON_ROLE_FILE]]
 ```
 
+- Lire un role ROLE_NAME:
+```bash
+vault read auth/[[MODE_AUTH]]/role/[[ROLE_NAME]]
+```
+
 - Créer un secret SECRET:
 ```bash
 vault kv put secret/[[PATH_SECRET]] @[[JSON_ROLE_FILE]]
