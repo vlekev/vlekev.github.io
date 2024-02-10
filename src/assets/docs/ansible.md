@@ -28,7 +28,7 @@ ansible-vault encrypt [[FICHIER]]
 - Encrypter une VARIABLE:
 ```bash
 ansible-vault encrypt_string --vault-password-file [[VAULT_FILE]] [[VARIABLE_VALUE]] --name [[VARIABLE]]
-``` 
+```
 - Modifier le FICHIER:
 ```bash
 ansible-vault edit [[FICHIER]]
@@ -39,6 +39,10 @@ ansible-vault decrypt [[FICHIER]]
 ```
 
 ## Autre
+- Initialiser un ROLE:
+```bash
+ansible-galaxy init [[ROLE]]
+```
 - Lister l'inventaire:
 ```bash
 ansible-inventory -i [[INVENTORY]] --graph --ask-vault-pass
