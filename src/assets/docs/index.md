@@ -19,6 +19,7 @@
 - [brave](docs/brave)
 - [spinnaker](docs/spinnaker)
 - [css](docs/css)
+- [raspberry-pi](docs/raspberry-pi)
 
 # Documentation externe
 - [developpement général](https://developer.mozilla.org/fr/)
