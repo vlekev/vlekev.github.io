@@ -3,6 +3,10 @@
 [Retour au sommaire](docs/index)
 
 ## ansible CLI
+- Accepter de serveurs:
+```bash
+ ANSIBLE_HOST_KEY_CHECKING=False ansible -m ping all
+```
 - Pinger le GROUP de serveurs:
 ```bash
  ansible [[GROUP]] -i [[INVENTORY]] -m ping --vault-password=[[FILE_PASSWORD]]
