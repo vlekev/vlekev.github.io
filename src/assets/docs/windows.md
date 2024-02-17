@@ -55,3 +55,8 @@ sudo mount -t drvfs d: /mnt/d
 - Raccourcie Win+R
 - shell:startup
 - Ajouter les raccourcies de l'application voulue
+
+## Dans WSL lorsque la date diffère de windows
+```bash
+sudo hwclock --hctosys
+```
