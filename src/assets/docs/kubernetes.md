@@ -2,23 +2,6 @@
 
 [Retour au sommaire](docs/index)
 
-## Kubectl
-### Installation
-- krew (manage k8s plugin)
-```bash
-sudo apt-get install -y git
-(
-  set -x; cd "$(mktemp -d)" &&
-  OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
-  ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
-  KREW="krew-${OS}_${ARCH}" &&
-  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
-  tar zxvf "${KREW}.tar.gz" &&
-  ./"${KREW}" install krew
-)
-echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"' >> ~/.bashrc
-```
-
 ### Commandes utiles
 - Changer de namespace:
 ```bash
@@ -72,17 +55,29 @@ kubectl cp [[NAMESPACE]]/[[POD]]:[[PATH_FILE_TARGET]] [[PATH_FILE_DESTINATION]]
 ```bash
 kubectl cp [[PATH_FILE_TARGET]] [[NAMESPACE]]/[[POD]]:[[PATH_FILE_DESTINATION]]
 ```
-- Mise à l'echelle de DEPLOYMENT: 
+- Mise à l'echelle de DEPLOYMENT:
 ```bash
 kubectl scale deployment [[DEPLOYMENT]] --replicas=[[NB_REPLICAS]]
 ```
-- Change les limites cpu de DEPLOYMENT: 
+- Redémarage du DEPLOYMENT:
+```bash
+kubectl rollout restart deployment [[DEPLOYMENT]]
+```
+- Change les limites cpu de DEPLOYMENT:
 ```bash
 kubectl patch deployment [[DEPLOYMENT]] --type json -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/resources/limits/cpu", "value":"[[CPU_LIMIT]]"}]'
 ```
-- Change variable environnement des déploiements: 
+- Change variable environnement des déploiements:
 ```bash
 kubectl set env deployment --selector='[[LABEL]]=[[LABEL_VALUE]],...' [[ENV]]=[[ENV_VALUE]] ...
+```
+- Tester un helm:
+```bash
+helm template [[HELM_NAME]] [[HELM_REPO]] -f [[HELM_VALUE]] ...
+```
+- Obtenir l'historique du helm:
+```bash
+helm history [[HELM_NAME]]
 ```
 
 ### Snippet

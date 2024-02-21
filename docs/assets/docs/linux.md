@@ -111,9 +111,9 @@ df -f
 du -hd1
 ```
 
-- Lister tout les fichiers du répertoire DIR:
+- Lister tout les fichiers de moins de NB_JOUR jour(s) du répertoire DIR sans le repertoire EXCLUDE_DIR:
 ```bash
-find [[DIR]] -type f
+find [[DIR]] -type f -mtime -[[NB_JOUR]] !-path [[EXCLUDE_DIR]] -exec -hs1 {} \;
 ```
 
 - Lister tout les ports utilisés:
@@ -213,4 +213,10 @@ openssl genrsa -aes128 2048 > $domaine.key
 openssl rsa -in $domaine.key -out $domaine.key
 openssl req -utf8 -new -key $domaine.key -out $domaine.csr
 openssl x509 -in $domaine.csr -out $domaine.crt -req -signkey $domaine.key -days 3650
+```
+
+- Bashrc custom
+```bash
+# Synchronisation la commande history avec plusieur session
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 ```
