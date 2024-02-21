@@ -71,13 +71,33 @@ kubectl patch deployment [[DEPLOYMENT]] --type json -p='[{"op": "replace", "path
 ```bash
 kubectl set env deployment --selector='[[LABEL]]=[[LABEL_VALUE]],...' [[ENV]]=[[ENV_VALUE]] ...
 ```
-- Tester un helm:
+- Lister les helm:
+```bash
+helm ls
+```
+- Tester le helm HELM_NAME:
 ```bash
 helm template [[HELM_NAME]] [[HELM_REPO]] -f [[HELM_VALUE]] ...
 ```
-- Obtenir l'historique du helm:
+- Obtenir l'historique du helm HELM_NAME:
 ```bash
 helm history [[HELM_NAME]]
+```
+- Installer le helm HELM_NAME:
+```bash
+helm install [[HELM_NAME]] [[HELM_REPO]] -f [[HELM_VALUE]] ...
+```
+- Mettre à jour le helm HELM_NAME:
+```bash
+helm upgrade [[HELM_NAME]] [[HELM_REPO]] -f [[HELM_VALUE]] ...
+```
+- Rollback le helm HELM_NAME:
+```bash
+helm rollback [[HELM_NAME]] [[HELM_REVISION]]
+```
+- désinstaller le helm HELM_NAME:
+```bash
+helm uninstall [[HELM_NAME]]
 ```
 
 ### Snippet
