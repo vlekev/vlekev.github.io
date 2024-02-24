@@ -18,5 +18,5 @@ vagrant ssh [[VM]]
 ```
 - Terminer un projet
 ```bash
-vagrant destroy
+vagrant destroy -f
 ```
