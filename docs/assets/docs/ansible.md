@@ -21,7 +21,7 @@ ansible [[GROUP]] -i [[INVENTORY]] -m ansible.builtin.script -a "[[SCRIPT]] [[AR
 ```
 - Lancer un PLAYBOOK avec seulement les tâches tagger TAG:
 ```bash
-ansible-playbook [[PLAYBOOK]] -i [[INVENTORY]] --vault-password=[[FILE_PASSWORD]] --tags TAG --extra-vars "[[KEY]]=[[VALUE]]..."
+ansible-playbook [[PLAYBOOK]] -i [[INVENTORY]] --vault-password=[[FILE_PASSWORD]] --tags [[TAGS(ex:tag1,tag2,...)]] --skip-tags [[SKIPPED_TAGS(ex:tag1,tag2,...)]] --extra-vars "[[KEY]]=[[VALUE]]..."
 ```
 
 ## ansible vault

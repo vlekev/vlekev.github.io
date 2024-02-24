@@ -21,6 +21,7 @@
 - [css](docs/css)
 - [raspberry-pi](docs/raspberry-pi)
 - [vagrant](docs/vagrant)
+- [microk8s](docs/microk8s)
 
 # Documentation externe
 - [developpement général](https://developer.mozilla.org/fr/)
