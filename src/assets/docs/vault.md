@@ -57,5 +57,5 @@ vault kv put secret/[[PATH_SECRET]] @[[JSON_ROLE_FILE]]
 
 - Obtenir un secret SECRET:
 ```bash
-vault kv get secret/[[PATH_SECRET]]
+vault kv get [-field=[[FIELD]]] secret/[[PATH_SECRET]]
 ```
