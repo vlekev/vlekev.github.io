@@ -43,3 +43,4 @@
 - [kubernetes-api](https://kubernetes.io/docs/reference/kubernetes-api/)
 - [blender](https://https://docs.blender.org/manual/fr/latest/)
 - [unreal-engine](https://docs.unrealengine.com/)
+- [jq](https://jqlang.github.io/jq/manual/)
