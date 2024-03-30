@@ -96,10 +96,10 @@ db.[[TABLE]].insertMany([[ARRAY_JSON_DATA]])
 
 - Mettre à jour une/des donnée(s) de TABLE:
 ```javascript
-db.[[TABLE]].updateMany([[JSON_QUERY]], [[JSON_DATA]], [[JSON_OPTIONS]])
+db.[[TABLE]].updateMany([[JSON_QUERY({_id:'x'})]], [[JSON_DATA({$set:{nom:'nouveau'}})]], [[JSON_OPTIONS]])
 ```
 
 - Supprimer une/des donnée(s) de TABLE:
 ```javascript
-db.[[TABLE]].deleteMany([[JSON_QUERY]], [[JSON_OPTIONS]])
+db.[[TABLE]].deleteMany([[JSON_QUERY({_id:'x'})]], [[JSON_OPTIONS]])
 ```
