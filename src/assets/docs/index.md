@@ -44,3 +44,4 @@
 - [blender](https://https://docs.blender.org/manual/fr/latest/)
 - [unreal-engine](https://docs.unrealengine.com/)
 - [jq](https://jqlang.github.io/jq/manual/)
+- [mermaid](https://mermaid.js.org/intro/)
