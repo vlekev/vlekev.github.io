@@ -23,6 +23,7 @@
 - [vagrant](docs/vagrant)
 - [microk8s](docs/microk8s)
 - [redis](docs/redis)
+- [ssh](docs/ssh)
 
 # Documentation externe
 - [developpement général](https://developer.mozilla.org/fr/)

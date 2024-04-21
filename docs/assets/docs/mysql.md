@@ -53,6 +53,10 @@ CREATE DATABASE IF NOT EXISTS [[DATABASE]];
 ```sql
 CREATE USER IF NOT EXISTS '[[USER]]'@'[[HOSTNAME]]' IDENTIFIED BY '[[PASSWORD]]';
 ```
+- Obtenir les droits de USER:
+```sql
+SHOW GRANTS FOR [[USER]];
+```
 - Donner les droits sur DATABASE a USER:
 ```sql
 GRANT ALL PRIVILEGES ON [[DATABASE(*)]].[[TABLE(*)]] TO '[[USER]]'@'[[HOSTNAME]]';FLUSH PRIVILEGES;
@@ -75,10 +79,10 @@ SELECT [[...]] FROM [[TABLE]] GROUP BY [[...]] WITH ROLLUP;
 ```
 - Obtenir la taille de chaque base de donnée:
 ```sql
-SELECT 
+SELECT
     table_schema "database",
-    ROUND(COALESCE(SUM(data_length + index_length),0) / 1024 / 1024, 1) "taille (MB)" 
-FROM information_schema.tables 
+    ROUND(COALESCE(SUM(data_length + index_length),0) / 1024 / 1024, 1) "taille (MB)"
+FROM information_schema.tables
 GROUP BY table_schema;
 ```
 - Réutiliser une requête pour une autre:
