@@ -1,0 +1,14 @@
+{
+    "name": "Angular",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "latest"
+        }
+    },
+    "forwardPorts": [
+        4200,
+        9876
+    ],
+    "postCreateCommand": "npm i"
+}
