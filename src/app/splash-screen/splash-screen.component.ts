@@ -11,6 +11,7 @@ export class SplashScreenComponent implements OnInit {
   windowHeight!: string;
   splashTransition!: string;
   opacityChange: number = 1;
+  displayChange: string = "";
 
   @Input() animationDuration: number = 0.5;
   @Input() duration: number = 1;
@@ -45,6 +46,7 @@ export class SplashScreenComponent implements OnInit {
       this.splashTransition = transitionStyle;
 
       setTimeout(() => {
+        this.displayChange = "none";
         this.showSplash = !this.showSplash;
       }, this.animationDuration * 1000);
     }, this.duration * 1000);
