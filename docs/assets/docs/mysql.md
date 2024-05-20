@@ -5,19 +5,19 @@
 ## Commandes utiles
 - Se connecter à la base de donnée (DATABASE):
 ```bash
-mysql -u [[USER]] -p [[PASSWORD('')]] -h [[HOST]] -P [[PORT(3306)]] -D [[DATABASE('')]]"
+mysql -u [[USER]] -p [[PASSWORD]] -h [[HOST]] -P [[PORT(3306)]] -D [[DATABASE]]"
 ```
 - Faire une requête sur DATABASE:
 ```bash
-mysql -u [[USER]] -p [[PASSWORD('')]] -h [[HOST]] -P [[PORT(3306)]] -D [[DATABASE('')]] -Bsre "[[SQL]]"
+mysql -u [[USER]] -p [[PASSWORD]] -h [[HOST]] -P [[PORT(3306)]] -D [[DATABASE]] -Bsre "[[SQL]]"
 ```
 - Exporter une base de donnée:
 ```bash
-mysqldump -u [[USER]] -p [[PASSWORD('')]] -h [[HOST]] -P [[PORT(3306)]] --single-transaction --skip-lock-tables --routines --triggers [[DATABASE('')]] > [[EXPORT_NAME]].sql
+mysqldump -u [[USER]] -p [[PASSWORD]] -h [[HOST]] -P [[PORT(3306)]] --single-transaction --skip-lock-tables --routines --triggers [[DATABASE]] > [[EXPORT_NAME]].sql
 ```
 - Importer une base de donnée:
 ```bash
-mysql -u [[USER]] -p[[PASSWORD('')]] -h [[HOST]] -P [[PORT(3306)]] [[DATABASE('')]] < [[EXPORT_NAME]].sql
+mysql -u [[USER]] -p[[PASSWORD]] -h [[HOST]] -P [[PORT(3306)]] [[DATABASE]] < [[EXPORT_NAME]].sql
 ```
 
 ## Requêtes utiles

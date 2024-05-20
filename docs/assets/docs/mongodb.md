@@ -7,25 +7,25 @@
 - Se connecter à la base de donnée (DATABASE):
 
 ```bash
-mongosh "mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]"
+mongosh "mongodb://[[USER]]:[[PASSWORD]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE]]"
 ```
 
 - Faire une requête sur DATABASE:
 
 ```bash
-mongosh "mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]" --eval "[[QUERY_JAVASCRIPT]]"
+mongosh "mongodb://[[USER]]:[[PASSWORD]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE]]" --eval "[[QUERY_JAVASCRIPT]]"
 ```
 
 - Exporter une base de donnée:
 
 ```bash
-mongodump --uri="mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]" -o [[EXPORT_NAME]] --gzip
+mongodump --uri="mongodb://[[USER]]:[[PASSWORD]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE]]" -o [[EXPORT_NAME]] --gzip
 ```
 
 - Importer une base de donnée:
 
 ```bash
-mongorestore --uri="mongodb://[[USER]]:[[PASSWORD('')]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE('')]]" [[EXPORT_NAME]] --gzip
+mongorestore --uri="mongodb://[[USER]]:[[PASSWORD]]@[[HOST]]:[[PORT(27017)]]/[[DATABASE]]" [[EXPORT_NAME]] --gzip
 ```
 
 ## Requêtes utiles
