@@ -14,6 +14,7 @@
 - [mongodb](docs/mongodb)
 - [mssql](docs/mssql)
 - [mysql](docs/mysql)
+- [rabbitmq](docs/rabbitmq)
 - [raspberry-pi](docs/raspberry-pi)
 - [redis](docs/redis)
 - [spinnaker](docs/spinnaker)
