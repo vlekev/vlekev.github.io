@@ -6,6 +6,7 @@
 - [brave](docs/brave)
 - [css](docs/css)
 - [docker](docs/docker)
+- [ftp](docs/ftp)
 - [git](docs/git)
 - [javascript](docs/javascript)
 - [kubernetes](docs/kubernetes)
