@@ -167,7 +167,7 @@ printenv
 ```
 - Appel API:
 ```bash
-curl -H "[[HEADER_KEY]]: [[HEADER_VALUE]]" -X [[METHOD_HTTP]] [[URL]] -d "[[BODY_DATA]]"
+curl -s -H "[[HEADER_KEY]]: [[HEADER_VALUE]]" -X [[METHOD_HTTP]] [[URL]] -d "[[BODY_DATA]]"
 ```
 - Obtenir l'ip d'un domaine:
 ```bash
