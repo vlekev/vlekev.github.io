@@ -69,3 +69,24 @@ docker-compose up -d --build
 ```bash
 docker-compose down
 ```
+### Example
+```compose
+version: '3.8' # version de compose utilisé
+
+services:
+  debian: &os # un service ce qui pourra être réutilisé sur d'autre service
+    container_name: debian # nom du service dans docker
+    image: service:latest # image et tag utilisé
+    volumes:
+    - ./script.sh:/opt/script.sh # on ajoute les volumes
+    ports:
+    - "8080:8080" # port forwardé
+    entrypoint: [ "/bin/bash" ] # 
+  debian-2:
+    <<: *os # ici on réaplique le service précédent
+    container_name: debian-2 # on override si besoin
+    ports:
+    - "8081:8080"
+    depends_on:
+      - debian # debian-2 attendra que debian démarre
+```
