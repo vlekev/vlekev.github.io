@@ -20,6 +20,7 @@
 - [redis](docs/redis)
 - [spinnaker](docs/spinnaker)
 - [ssh](docs/ssh)
+- [terraform](docs/terraform)
 - [unreal-engine](docs/unreal-engine)
 - [vagrant](docs/vagrant)
 - [vault](docs/vault)
