@@ -15,6 +15,12 @@ if not exist "C:\Program Files\Docker\Docker\Docker Desktop.exe" (
 	%HOMEPATH%\Downloads\DockerDesktopInstaller.exe
 )
 
+if not exist "C:\Program Files\7-Zip\7zFM.exe" (
+	echo Installation de 7Zip
+	curl -o %HOMEPATH%\Downloads\7ZipInstaller.exe -L "https://github.com/ip7z/7zip/releases/latest/download/7z2407-x64.exe"
+	%HOMEPATH%\Downloads\7ZipInstaller.exe
+)
+
 echo Un redemarrage est necessaire (CTRL+C pour éviter le redemarrage)
 pause
 shutdown.exe /r /t 00
