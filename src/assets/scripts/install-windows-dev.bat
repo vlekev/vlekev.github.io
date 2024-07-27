@@ -9,6 +9,12 @@ if not exist "C:\Users\vleke\AppData\Local\Programs\Microsoft VS Code\Code.exe" 
 	%HOMEPATH%\Downloads\VSCodeInstaller.exe
 )
 
+if not exist "C:\Users\vleke\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe" (
+	echo Installation de Brave
+	curl -o %HOMEPATH%\Downloads\BraveInstaller.exe -L "https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserSetup.exe"
+	%HOMEPATH%\Downloads\BraveInstaller.exe
+)
+
 if not exist "C:\Program Files\Docker\Docker\Docker Desktop.exe" (
 	echo Installation de DockerDesktop
 	curl -o %HOMEPATH%\Downloads\DockerDesktopInstaller.exe -L "https://desktop.docker.com/win/main/amd64/Docker%%20Desktop%%20Installer.exe"
@@ -19,6 +25,12 @@ if not exist "C:\Program Files\7-Zip\7zFM.exe" (
 	echo Installation de 7Zip
 	curl -o %HOMEPATH%\Downloads\7ZipInstaller.exe -L "https://github.com/ip7z/7zip/releases/latest/download/7z2407-x64.exe"
 	%HOMEPATH%\Downloads\7ZipInstaller.exe
+)
+
+if not exist "C:\Program Files\Unity Hub\Unity Hub.exe" (
+	echo Installation de Unity
+	curl -o %HOMEPATH%\Downloads\UnityInstaller.exe -L "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe"
+	%HOMEPATH%\Downloads\UnityInstaller.exe
 )
 
 echo Un redemarrage est necessaire (CTRL+C pour éviter le redemarrage)
