@@ -5,7 +5,7 @@
 ## Sed
 - Modifier REGEX_MATCH par REPLACE dans FICHIER:
 ```bash
-sed -i 's/[[REGEX_MATCH]]/[[REGEX_MATCH]]/g' [[FICHIER]]
+sed -i 's/[[REGEX_MATCH]]/[[REPLACE]]/g' [[FICHIER]]
 ```
 - Commenter des lignes de LS à LE dans FICHIER:
 ```bash
@@ -53,6 +53,10 @@ ssh [[SSH_USER]]@[[SSH_HOST]] -p[[SSH_PORT]] -i ~/.ssh/[[SSH_KEY_NAME]]
 ssh -L [[LOCAL_PORT]]:[[HOST_CIBLE]]:[[HOST_CIBLE_PORT]] [[SSH_USER]]@[[SSH_HOST]]
 ```
 ## Commandes utiles
+- Obtenir son ip externe
+```bash
+curl ifconfig.me
+```
 - Création d'une archive tgz
 ```bash
 tar -czvf [[ARCHIVE_NAME]] [[FILES_OR_DIRECTORY]]...

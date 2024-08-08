@@ -33,6 +33,18 @@ if not exist "C:\Program Files\Unity Hub\Unity Hub.exe" (
 	%HOMEPATH%\Downloads\UnityInstaller.exe
 )
 
+if not exist "C:\Program Files\VideoLAN\VLC\vlc.exe" (
+	echo Installation de VLC
+	curl -o %HOMEPATH%\Downloads\VLCInstaller.exe -L "https://ftp.free.org/mirrors/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64.exe"
+	%HOMEPATH%\Downloads\VLCInstaller.exe
+)
+
+if not exist "C:\Program Files\Inkscape\bin\inkscape.exe" (
+	echo Installation de Inkscape
+	curl -o %HOMEPATH%\Downloads\InkscapeInstaller.exe -L "https://inkscape.org/gallery/item/44617/inkscape-1.3.2_2023-11-25_091e20e-x64.exe"
+	%HOMEPATH%\Downloads\InkscapeInstaller.exe
+)
+
 echo Un redemarrage est necessaire (CTRL+C pour éviter le redemarrage)
 pause
 shutdown.exe /r /t 00
