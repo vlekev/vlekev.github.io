@@ -21,6 +21,7 @@
 - [spinnaker](docs/spinnaker)
 - [ssh](docs/ssh)
 - [terraform](docs/terraform)
+- [unity](docs/unity)
 - [unreal-engine](docs/unreal-engine)
 - [vagrant](docs/vagrant)
 - [vault](docs/vault)
