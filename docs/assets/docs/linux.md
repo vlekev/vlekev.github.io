@@ -53,6 +53,10 @@ ssh [[SSH_USER]]@[[SSH_HOST]] -p[[SSH_PORT]] -i ~/.ssh/[[SSH_KEY_NAME]]
 ssh -L [[LOCAL_PORT]]:[[HOST_CIBLE]]:[[HOST_CIBLE_PORT]] [[SSH_USER]]@[[SSH_HOST]]
 ```
 ## Commandes utiles
+- Changer son mot de passe
+```bash
+passwd [[USER]]
+```
 - Obtenir son ip externe
 ```bash
 curl ifconfig.me
