@@ -57,6 +57,10 @@ ssh -L [[LOCAL_PORT]]:[[HOST_CIBLE]]:[[HOST_CIBLE_PORT]] [[SSH_USER]]@[[SSH_HOST
 ```bash
 passwd [[USER]]
 ```
+- Créer un lien symbolique de TARGET vers DIRECTORY
+```bash
+ln -s [[TARGET]] [[DIRECTORY]]
+```
 - Obtenir son ip externe
 ```bash
 curl ifconfig.me

@@ -14,11 +14,14 @@ else
     sudo yt-dlp -U
 fi
 
-if [ -f "$1" ]; then
-    yt-dlp --output-na-placeholder "Unknow" --no-playlist --audio-format mp3 -wx -o 'youtube-download/%(artist)s - %(title)s.%(ext)s' -a "$1"
-    # youtube-dl -vvvv --proxy "socks5://127.0.0.1:9050/" --output-na-placeholder "Unknow" --no-playlist --audio-format mp3 -wx -o 'youtube-download/%(artist)s - %(title)s.%(ext)s' -a "$1"
+bdd=${1:-"bdd"}
+target=${2:-"youtube-download"}
+
+if [ -f "$bdd" ]; then
+    yt-dlp --output-na-placeholder "Unknow" --no-playlist --audio-format mp3 -wx -o "$target/%(artist)s - %(title)s.%(ext)s" -a "$bdd"
+    # youtube-dl -vvvv --proxy "socks5://127.0.0.1:9050/" --output-na-placeholder "Unknow" --no-playlist --audio-format mp3 -wx -o "$target/%(artist)s - %(title)s.%(ext)s" -a "$bdd"
 else
-    echo -e "Fichier de donnée '$1' inexistant" >&2
+    echo -e "Fichier de donnée '$bdd' inexistant" >&2
     exit 1
 fi
 

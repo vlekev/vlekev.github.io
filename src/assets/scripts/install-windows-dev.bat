@@ -45,6 +45,12 @@ if not exist "C:\Program Files\Inkscape\bin\inkscape.exe" (
 	%HOMEPATH%\Downloads\InkscapeInstaller.exe
 )
 
+if not exist "C:\Program Files\Oracle\VirtualBox\VirtualBox.exe" (
+	echo Installation de Virtualbox
+	curl -o %HOMEPATH%\Downloads\VirtualboxInstaller.exe -L "https://download.virtualbox.org/virtualbox/7.0.20/VirtualBox-7.0.20-163906-Win.exe"
+	%HOMEPATH%\Downloads\VirtualboxInstaller.exe
+)
+
 echo Un redemarrage est necessaire (CTRL+C pour éviter le redemarrage)
 pause
 shutdown.exe /r /t 00
