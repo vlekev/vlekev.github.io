@@ -181,6 +181,10 @@ printenv
 ```bash
 curl -s -H "[[HEADER_KEY]]: [[HEADER_VALUE]]" -X [[METHOD_HTTP]] [[URL]] -d "[[BODY_DATA]]"
 ```
+- Yaml vers Json:
+```bash
+yq -o=json eval [[FILE]].yml
+```
 - Obtenir l'ip d'un domaine:
 ```bash
 dig +short [[DOMAINE]]

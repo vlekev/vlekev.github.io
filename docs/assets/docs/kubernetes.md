@@ -43,6 +43,10 @@ kubectl create secret generic [[SECRET_NAME]] (--from-literal [[KEY]]='[[VALUE]]
 ```bash
 kubectl delete secret [[SECRET_NAME]] --ignore-not-found
 ```
+- Obtenir les valeurs décodé d'un Secret:
+```bash
+kubectl get secret [[SECRET_NAME]] -o yaml | yq e '.data|map_value(@base64d)'
+```
 - Obtenir les performances des pods:
 ```bash
 kubectl get pods -o=custom-columns='NAME:metadata.name,CPU:spec.containers[].resources.limits.cpu,RAM:spec.containers[].resources.limits.memory'
@@ -71,6 +75,7 @@ kubectl patch deployment [[DEPLOYMENT]] --type json -p='[{"op": "replace", "path
 ```bash
 kubectl set env deployment --selector='[[LABEL]]=[[LABEL_VALUE]],...' [[ENV]]=[[ENV_VALUE]] ...
 ```
+### Helm
 - Lister les helm:
 ```bash
 helm ls
