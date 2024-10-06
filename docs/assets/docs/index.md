@@ -18,6 +18,7 @@
 - [rabbitmq](docs/rabbitmq)
 - [raspberry-pi](docs/raspberry-pi)
 - [redis](docs/redis)
+- [sed](docs/sed)
 - [spinnaker](docs/spinnaker)
 - [ssh](docs/ssh)
 - [terraform](docs/terraform)

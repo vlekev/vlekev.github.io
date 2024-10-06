@@ -11,6 +11,11 @@ ssh-keyscan -H [[HOST]] >> ~/.ssh/known_hosts
 ```bash
 ssh-keygen -N [[PASSPHRASE]] -f [[SSH_KEY_NAME]]
 ```
+- Ajouter la clef SSH_KEY_NAME à l'agent ssh:
+```bash
+! $(ps -p $SSH_AGENT_PID &> /dev/null) && eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/[[SSH_KEY_NAME]]
+```
 - Ajouter la clef au serveur (si mot de passe activé sinon placer soit même):
 ```bash
 ssh-copy-id [[SSH_USER]]@[[SSH_HOST]] -p[[SSH_PORT]] -i ~/.ssh/[[SSH_KEY_NAME]]

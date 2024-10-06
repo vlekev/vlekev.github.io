@@ -2,57 +2,11 @@
 
 [Retour au sommaire](docs/index)
 
-## Sed
-- Modifier REGEX_MATCH par REPLACE dans FICHIER:
-```bash
-sed -i 's/[[REGEX_MATCH]]/[[REPLACE]]/g' [[FICHIER]]
-```
-- Commenter des lignes de LS à LE dans FICHIER:
-```bash
-sed -i '[[LS]],[[LE]] s/^/#/' [[FICHIER]]
-```
-- Décommenter des lignes de LS à LE dans FICHIER:
-```bash
-sed -i '[[LS]],[[LE]] s/^#//' [[FICHIER]]
-```
-- Inserer INSERT aprés la ligne qui match avec MATCH dans FICHIER:
-```bash
-sed -i '/[[MATCH]]/a [[INSERT]]' [[FICHIER]]
-```
+## Commandes utiles
 - Activer les logs de cron:
 ```bash
 sed -i 's/^#cron.\*/cron.\*/' /etc/rsyslog.conf
 ```
-- Ajouter TEXT au début de NUMBER_LIGNE dans FICHIER:
-```bash
-sed -i '[[NUMBER_LIGNE]] s|^|[[TEXT]]|' [[FICHIER]]
-```
-- Ajouter TEXT à la fin de NUMBER_LIGNE dans FICHIER:
-```bash
-sed -i '[[NUMBER_LIGNE]] s|$|[[TEXT]]|' [[FICHIER]]
-```
-## Ssh
-- Reconnaitre HOST pour ssh:
-```bash
-ssh-keyscan -H [[HOST]] >> ~/.ssh/known_hosts
-```
-- Créer une paire de clef:
-```bash
-ssh-keygen -t ed25519 -b 4096 -N [[PASSPHRASE]] -f [[SSH_KEY_NAME]]
-```
-- Ajouter la clef au serveur (si mot de passe activé sinon placer soit même):
-```bash
-cat ~/.ssh/[[SSH_KEY_NAME]].pub | ssh [[SSH_USER]]@[[SSH_HOST]] 'cat >> ~/.ssh/authorized_keys'
-```
-- Se connecter:
-```bash
-ssh [[SSH_USER]]@[[SSH_HOST]] -p[[SSH_PORT]] -i ~/.ssh/[[SSH_KEY_NAME]]
-```
-- Port forward:
-```bash
-ssh -L [[LOCAL_PORT]]:[[HOST_CIBLE]]:[[HOST_CIBLE_PORT]] [[SSH_USER]]@[[SSH_HOST]]
-```
-## Commandes utiles
 - Changer son mot de passe
 ```bash
 passwd [[USER]]
@@ -136,6 +90,10 @@ echo "[[TEXT]]" | md5sum | cut -d' ' -f1
 - Trouver un TEXT dans les fichiers du DOSSIER:
 ```bash
 grep -hornw '[[DOSSIER]]' -e '[[TEXT]]'
+```
+- Lister les processus qui utilise FILE:
+```bash
+lsof [[FILE]]
 ```
 - Transfert FICHIER d'un serveur en local:
 ```bash

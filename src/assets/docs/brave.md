@@ -11,3 +11,7 @@ brave://net-internals/#dns
 ```
 brave://flags/#enable-force-dark>
 ```
+
+- Activer la lecture en arrière plan:
+    - Aller dans Paramètres / Médias
+    - Activer Lecture en arrière-plan
