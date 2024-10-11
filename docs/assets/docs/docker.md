@@ -68,6 +68,10 @@ docker-compose build
 ```bash
 docker-compose up -d --build
 ```
+- Démarrer les services qui appartiennent à PROFILE:
+```bash
+docker-compose --profile PROFILE up -d
+```
 - Arréter et supprimer les services:
 ```bash
 docker-compose down
