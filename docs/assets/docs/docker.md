@@ -5,7 +5,10 @@
 ## Docker CLI
 - Créer une image docker local avec DOCKERFILE et pour nom IMAGE:
 ```bash
-docker build [[DOCKERFILE]] -t [[IMAGE]]:[[VERSION]]
+# ancienne version
+docker build [[CONTEXT_DIR]] -f [[DOCKERFILE]] -t [[IMAGE]]:[[VERSION]]
+# recente version
+docker buildx build [[CONTEXT_DIR]] -f [[DOCKERFILE]] -t [[IMAGE]]:[[VERSION]]
 ```
 - Se connecter à REGISTRY:
 ```bash
@@ -81,7 +84,7 @@ services:
     - ./script.sh:/opt/script.sh # on ajoute les volumes
     ports:
     - "8080:8080" # port forwardé
-    entrypoint: [ "/bin/bash" ] # 
+    entrypoint: [ "/bin/bash" ] #
   debian-2:
     <<: *os # ici on réaplique le service précédent
     container_name: debian-2 # on override si besoin
