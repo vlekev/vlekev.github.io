@@ -4,9 +4,9 @@
 
 ## Nvm
 Permet la gestion de multiple version de node
-- Installer la dernière version LTS:
+- Installer la dernière version LTS avec tout les packages:
 ```bash
-nvm install --lts
+nvm install --lts --reinstall-packages-from=current
 ```
 - Mettre VERSION comme node par defaut:
 ```bash
