@@ -1,0 +1,25 @@
+# CSS
+
+[Retour au sommaire](docs/index)
+
+## Commandes utiles
+- Utiliser les animations: 
+```css
+#div {
+  position: relative;
+  animation-name: ANIMATION_NAME;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes ANIMATION_NAME {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+```
