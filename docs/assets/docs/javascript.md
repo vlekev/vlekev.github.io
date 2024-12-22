@@ -26,6 +26,10 @@ nvm uninstall [[VERSION]]
 ```
 
 ## Npm
+- Install les packages
+```bash
+npm install
+```
 - Mettre à jour les packages
 ```bash
 npm update
