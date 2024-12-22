@@ -24,3 +24,9 @@ nvm install-latest-npm
 ```bash
 nvm uninstall [[VERSION]]
 ```
+
+## Npm
+- Mettre à jour les packages
+```bash
+npm update
+```
