@@ -43,6 +43,10 @@ ansible-vault decrypt [[FICHIER]]
 ```
 
 ## Autre
+- Installer les collections:
+```bash
+ansible-galaxy install -r requirements.yml
+```
 - Initialiser un ROLE:
 ```bash
 ansible-galaxy init [[ROLE]]
