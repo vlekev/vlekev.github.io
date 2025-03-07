@@ -47,6 +47,10 @@ tar -xzvf [[ARCHIVE_NAME]]
 ```bash
 w
 ```
+- Obtenir la liste des dernières connections de USER:
+```bash
+last [[USER]] -s -[[DAYS_NUMBER]]days
+```
 - Ecrire sur un autre terminal local:
 ```bash
 echo TEXT > /dev/pts/[[TERMINAL_ID]]
@@ -121,7 +125,7 @@ sudo setfacl -R -m u:"[[USER]]":rwX [[DOSSIER]]
 ```
 - Tester une KEY de ARRAY existe:
 ```bash
-[ "${[[ARRAY]][[[KEY]]]+1}" ] && echo "existe || echo "n'existe pas"
+[ "${[[ARRAY]][[[KEY]]]+1}" ] && echo "existe" || echo "n'existe pas"
 ```
 - Prendre une partie de STRING:
 ```bash
