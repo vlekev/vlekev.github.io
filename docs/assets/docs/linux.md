@@ -31,6 +31,14 @@ tar -tzvf [[ARCHIVE_NAME]]
 ```bash
 tar -xzvf [[ARCHIVE_NAME]]
 ```
+- Création d'une archive zip
+```bash
+zip -r [[ARCHIVE_NAME]] [[FILES_OR_DIRECTORY]]...
+```
+- Extraction d'une archive zip
+```bash
+unzip [[ARCHIVE_NAME]] -d [[DESTINATION]]
+```
 - Afficher le résultat de la COMMANDE sur stderr:
 ```bash
 [[COMMANDE]] >&2
