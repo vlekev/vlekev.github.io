@@ -3,7 +3,7 @@
 sudo apt-get update -y
 
 echo Installation des bases
-sudo apt-get install -y gnupg apt-transport-https lsb-release ca-certificates make git curl vim wget bash-completion zip cron
+sudo apt-get install -y gnupg apt-transport-https lsb-release ca-certificates make git curl vim wget bash-completion zip cron jq
 
 
 echo Installation/Mise à jour de nvm
