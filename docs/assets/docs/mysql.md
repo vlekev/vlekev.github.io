@@ -59,7 +59,7 @@ SHOW GRANTS FOR [[USER]];
 ```
 - Donner les droits sur DATABASE a USER:
 ```sql
-GRANT ALL PRIVILEGES ON [[DATABASE(*)]].[[TABLE(*)]] TO '[[USER]]'@'[[HOSTNAME]]';FLUSH PRIVILEGES;
+GRANT ALL PRIVILEGES ON [[DATABASE(*)]].[[TABLE(*)]] TO '[[USER]]'@'[[HOSTNAME(%)]]';FLUSH PRIVILEGES;
 ```
 - Supprimer un USER:
 ```sql
@@ -67,15 +67,23 @@ DROP USER '[[USER]]'@'[[HOSTNAME]]';
 ```
 - Sortir le résultat d'une requête en csv dans le dossier '/var/lib/mysql/' par défaut:
 ```sql
-SELECT * FROM [[TABLE]] INTO OUTFILE '[[CSV_NAME]].csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n';
+SELECT [[SELECTION(*)]] FROM [[TABLE]] INTO OUTFILE '[[CSV_NAME]].csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n';
+```
+- Créer une TABLE:
+```sql
+CREATE TABLE [[TABLE]] (
+    [[COLUMN]] [[DATA_TYPE(BOOL, INT(11), DEC(10,3), VARCHAR(255),...)]] [[CONSTRAINT(NOT NULL, UNIQUE, ...)]],
+    [[...]],
+    CONSTRAINT PK_[[TABLE]] PRIMARY KEY ([[COLUMNS]])
+);
 ```
 - Mettre à jour une/des donnée(s) de TABLE:
 ```sql
-UPDATE [[TABLE]] SET [[COLUMN]]=[[VALUE]],[[...]] WHERE [[...]];
+UPDATE [[TABLE]] SET [[COLUMN]]=[[VALUE]],[[...]] WHERE [[CONDITIONS]];
 ```
 - Ajouter une ligne total a TABLE:
 ```sql
-SELECT [[...]] FROM [[TABLE]] GROUP BY [[...]] WITH ROLLUP;
+SELECT [[SELECTION(*)]] FROM [[TABLE]] GROUP BY [[...]] WITH ROLLUP;
 ```
 - Obtenir la taille de chaque base de donnée:
 ```sql
@@ -88,7 +96,7 @@ GROUP BY table_schema;
 - Réutiliser une requête pour une autre:
 ```sql
 WITH [[REQUETE_NAME]] AS (
-	SELECT [[...]] FROM [[TABLE]]
+	SELECT [[SELECTION(*)]] FROM [[TABLE]]
 )
-SELECT [[...]] FROM [[REQUETE_NAME]];
+SELECT [[SELECTION(*)]] FROM [[REQUETE_NAME]];
 ```
