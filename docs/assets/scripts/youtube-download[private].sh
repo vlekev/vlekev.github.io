@@ -8,6 +8,7 @@ if ! command -v yt-dlp > /dev/null; then
     sudo chmod a+rx /usr/local/bin/yt-dlp
 
     sudo ln -s $(which python3) /usr/bin/python
+    sudo apt-get update -y
     sudo apt-get install -y ffmpeg
 else
     # sudo youtube-dl -U

@@ -26,7 +26,7 @@ docker save [[IMAGES]] -o [[TAR_FILE]]
 ```bash
 docker load -i [[TAR_FILE]]
 ```
-- Donner un tag à une IMAGE:
+- Donner un tag/Renommer une IMAGE:
 ```bash
 docker tag [[IMAGE]]:[[VERSION]] [[NEW_IMAGE]]:[[NEW_VERSION]]
 ```
